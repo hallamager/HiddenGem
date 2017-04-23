@@ -20,19 +20,14 @@ class SwipeCell: FoldingCell {
     
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var foldingCompanyNameLabel: UILabel!
-
-
-//    var number: Int = 0 {
-//        didSet {
-//            companyName.text = String(number)
-//            foldingCompanyName.text = String(number)
-//        }
-//    }
     
     override func awakeFromNib() {
         
         foregroundView.layer.cornerRadius = 5
-        foregroundView.layer.masksToBounds = true
+        foregroundView.layer.shadowOpacity = 1.7
+        foregroundView.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        foregroundView.layer.shadowRadius = 5.0
+        foregroundView.layer.shadowColor = UIColor.lightGray.cgColor
         
         super.awakeFromNib()
     }

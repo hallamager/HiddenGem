@@ -32,8 +32,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let kCloseCellHeight: CGFloat = 160
-    let kOpenCellHeight: CGFloat = 500
+    let kCloseCellHeight: CGFloat = 430
+    let kOpenCellHeight: CGFloat = 850
     
     var cells = buildCell()
     var cell: cellInfo!
