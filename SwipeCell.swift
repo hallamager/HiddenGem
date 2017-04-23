@@ -21,13 +21,22 @@ class SwipeCell: FoldingCell {
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var foldingCompanyNameLabel: UILabel!
     
+    @IBOutlet weak var LikeDislikeInfoPanel: UIView!
+    
     override func awakeFromNib() {
         
         foregroundView.layer.cornerRadius = 5
-        foregroundView.layer.shadowOpacity = 1.7
-        foregroundView.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        foregroundView.layer.shadowOpacity = 3
+        foregroundView.layer.shadowOffset = CGSize(width: 0, height: 0)
         foregroundView.layer.shadowRadius = 5.0
         foregroundView.layer.shadowColor = UIColor.lightGray.cgColor
+        
+        LikeDislikeInfoPanel.layer.cornerRadius = 5
+        LikeDislikeInfoPanel.layer.shadowOpacity = 3
+        LikeDislikeInfoPanel.layer.shadowOffset = CGSize(width: 0, height: 0)
+        LikeDislikeInfoPanel.layer.shadowRadius = 3.0
+        LikeDislikeInfoPanel.layer.shadowColor = UIColor.lightGray.cgColor
+
         
         super.awakeFromNib()
     }
@@ -43,6 +52,11 @@ class SwipeCell: FoldingCell {
         let durations = [0.26, 0.2, 0.2]
         return durations[itemIndex]
     }
+    
+    
+    //swipe Animation
+    
+    
     
     
 }

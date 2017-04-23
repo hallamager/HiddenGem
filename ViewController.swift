@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let kCloseCellHeight: CGFloat = 430
+    let kCloseCellHeight: CGFloat = 700
     let kOpenCellHeight: CGFloat = 850
     
     var cells = buildCell()
@@ -49,14 +49,16 @@ class ViewController: UIViewController {
         
         tableView.backgroundView = UIImageView(image: UIImage(named: "bg"))
         
-        
     }
     
-    // swipe animation
+    
+    
+    
     @IBAction func panCard(_ sender: UIPanGestureRecognizer) {
         
         let card = sender.view!
         let point = sender.translation(in: view)
+        
         card.center = CGPoint(x: view.center.x + point.x, y: view.center.y + point.y)
         
         if sender.state == UIGestureRecognizerState.ended {
@@ -125,6 +127,7 @@ extension ViewController: UITabBarDelegate {
             tableView.beginUpdates()
             tableView.endUpdates()
         }, completion: nil)
+        
     }
     
     func tableView(_ tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: IndexPath) {

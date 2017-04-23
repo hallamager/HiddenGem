@@ -27,8 +27,8 @@ func buildCell() -> [cellInfo] {
     var cells = [cellInfo]()
     
     cells.append(cellInfo(
-        companyName: "Company",
-        foldingCompanyName: "Company"
+        companyName: "COMPANY",
+        foldingCompanyName: "COMPANY"
         )
     )
     
