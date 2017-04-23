@@ -83,12 +83,16 @@
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstItem="T89-6c-fcJ" firstAttribute="centerX" secondItem="7A6-NV-RAF" secondAttribute="centerX" id="3fM-hh-sX2"/>
                                                         <constraint firstAttribute="height" constant="400" id="YWM-dm-dfJ"/>
                                                         <constraint firstItem="T89-6c-fcJ" firstAttribute="top" secondItem="7A6-NV-RAF" secondAttribute="top" constant="56" id="Ycb-cM-0Gx"/>
                                                         <constraint firstItem="T89-6c-fcJ" firstAttribute="centerY" secondItem="7A6-NV-RAF" secondAttribute="centerY" constant="-132.5" id="wo5-1S-h70"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="JoO-U4-OhE" appends="YES" id="txv-la-JJK"/>
+                                                    </connections>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="041-ka-VUR" userLabel="Contener">
                                                     <rect key="frame" x="13" y="490" width="574" height="800"/>
@@ -199,6 +203,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="JoO-U4-OhE">
+                    <connections>
+                        <action selector="panCard:" destination="BYZ-38-t0r" id="oIx-Fu-k50"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1348.8" y="-180.80959520239881"/>
         </scene>

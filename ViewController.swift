@@ -28,8 +28,8 @@ class ViewController: UIViewController {
     
     var selectedRow = 0
     var cellBeenOpened = false
-
-
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     let kCloseCellHeight: CGFloat = 430
@@ -49,6 +49,23 @@ class ViewController: UIViewController {
         
         tableView.backgroundView = UIImageView(image: UIImage(named: "bg"))
         
+        
+    }
+    
+    // swipe animation
+    @IBAction func panCard(_ sender: UIPanGestureRecognizer) {
+        
+        let card = sender.view!
+        let point = sender.translation(in: view)
+        card.center = CGPoint(x: view.center.x + point.x, y: view.center.y + point.y)
+        
+        if sender.state == UIGestureRecognizerState.ended {
+            
+            UIView.animate(withDuration: 0.2, animations: {
+                card.center = self.view.center
+            })
+            
+        }
         
     }
     
