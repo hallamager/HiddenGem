@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hTM-qZ-LWD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hTM-qZ-LWD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -52,7 +52,7 @@
         <!--ViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="ViewController" customClass="ViewController" customModule="HiddenGem" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="ViewController" customClass="ViewController" customModule="HiddenGem" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -72,7 +72,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="1373"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7A6-NV-RAF" userLabel="Foreground" customClass="RotatedView" customModule="FoldingCell">
+                                                <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7A6-NV-RAF" userLabel="Foreground" customClass="RotatedView" customModule="FoldingCell">
                                                     <rect key="frame" x="13" y="15" width="574" height="400"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T89-6c-fcJ" customClass="StyledLabel" customModule="HiddenGem" customModuleProvider="target">
@@ -240,9 +240,20 @@
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Amq-1g-gki" userLabel="LikeDislikeInfoPanel">
                                                     <rect key="frame" x="62" y="452" width="476" height="50"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzK-Oj-xii">
+                                                            <rect key="frame" x="422" y="10" width="46" height="30"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="LikeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nty-nD-hP3"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="dQD-LN-ltC"/>
+                                                        <constraint firstItem="xzK-Oj-xii" firstAttribute="centerY" secondItem="Amq-1g-gki" secondAttribute="centerY" id="gHt-k0-YkX"/>
+                                                        <constraint firstItem="xzK-Oj-xii" firstAttribute="trailing" secondItem="Amq-1g-gki" secondAttribute="trailingMargin" id="t7x-R3-VQe"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -266,6 +277,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="LikeDislikeInfoPanel" destination="Amq-1g-gki" id="jly-ZA-pWC"/>
+                                            <outlet property="card" destination="7A6-NV-RAF" id="wFf-S9-Vwb"/>
                                             <outlet property="companyNameLabel" destination="T89-6c-fcJ" id="1e4-aF-0J7"/>
                                             <outlet property="containerView" destination="041-ka-VUR" id="Z2K-5e-FES"/>
                                             <outlet property="containerViewTop" destination="hQi-jM-uud" id="A1Y-i3-VXI"/>
@@ -288,7 +300,17 @@
                             <constraint firstItem="RSU-bp-7kv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zMT-lS-BGu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bKW-Nx-oWe"/>
+                    <navigationItem key="navigationItem" id="bKW-Nx-oWe">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fei-Ed-y7e">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="reset"/>
+                            <connections>
+                                <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9UE-ae-tIG"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1400"/>
                     <connections>

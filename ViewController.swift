@@ -28,12 +28,13 @@ class ViewController: UIViewController {
     
     var selectedRow = 0
     var cellBeenOpened = false
-    
+
     
     @IBOutlet weak var tableView: UITableView!
     
     let kCloseCellHeight: CGFloat = 700
     let kOpenCellHeight: CGFloat = 850
+    
     
     var cells = buildCell()
     var cell: cellInfo!
@@ -52,7 +53,11 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func LikeButton(_ sender: UIButton) {
+    }
     
+    
+
     
     @IBAction func panCard(_ sender: UIPanGestureRecognizer) {
         
@@ -61,15 +66,51 @@ class ViewController: UIViewController {
         
         card.center = CGPoint(x: view.center.x + point.x, y: view.center.y + point.y)
         
+        func swipeLeft() {
+            //move off to the left
+            UIView.animate(withDuration: 0.3, animations: {
+                card.center = CGPoint(x: card.center.x - 200, y: card.center.y + 75)
+                card.alpha = 0
+            })
+        }
+        
+        func swipeRight() {
+            //move off to the right
+            UIView.animate(withDuration: 0.3, animations: {
+                card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
+                card.alpha = 0
+            })
+        }
+        
         if sender.state == UIGestureRecognizerState.ended {
             
-            UIView.animate(withDuration: 0.2, animations: {
-                card.center = self.view.center
-            })
+            if card.center.x < 75 {
+                swipeLeft()
+                return
+            } else if card.center.x > (view.frame.width - 75) {
+                swipeRight()
+                return
+            }
+           
+            resetCard()
             
         }
         
     }
+    
+    
+    
+    @IBAction func reset(_ sender: UIButton) {
+        resetCard()
+    }
+    
+    func resetCard() {
+        UIView.animate(withDuration: 0.2, animations: {
+
+        })
+        
+    }
+    
     
 }
 
@@ -111,6 +152,7 @@ extension ViewController: UITabBarDelegate {
         
         let cell = tableView.cellForRow(at: indexPath) as! SwipeCell
         cellBeenOpened = true
+        
         
         var duration = 0.0
         if cellHeights[indexPath.row] == kCloseCellHeight { // open cell
