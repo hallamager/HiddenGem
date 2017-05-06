@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,30 +16,48 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="448"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="companyImage" translatesAutoresizingMaskIntoConstraints="NO" id="kGD-BU-Osk">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="295"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vvj-aj-ZDz">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="448"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="companyImage" translatesAutoresizingMaskIntoConstraints="NO" id="kGD-BU-Osk" customClass="RoundedEnds" customModule="HiddenGem" customModuleProvider="target">
+                            <rect key="frame" x="8" y="8" width="359" height="277"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="277" id="Iee-8d-R3m"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WA8-EB-ozZ" customClass="StyledLabel" customModule="HiddenGem" customModuleProvider="target">
+                            <rect key="frame" x="8" y="293" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="295" id="n9o-L7-L1E"/>
+                        <constraint firstItem="WA8-EB-ozZ" firstAttribute="top" secondItem="kGD-BU-Osk" secondAttribute="bottom" constant="8" symbolic="YES" id="6VX-mh-8oA"/>
+                        <constraint firstItem="kGD-BU-Osk" firstAttribute="top" secondItem="Vvj-aj-ZDz" secondAttribute="topMargin" id="OUi-ek-H03"/>
+                        <constraint firstItem="kGD-BU-Osk" firstAttribute="leading" secondItem="Vvj-aj-ZDz" secondAttribute="leadingMargin" id="P4y-ee-clK"/>
+                        <constraint firstItem="kGD-BU-Osk" firstAttribute="trailing" secondItem="Vvj-aj-ZDz" secondAttribute="trailingMargin" id="i2d-Pa-39Z"/>
+                        <constraint firstItem="kGD-BU-Osk" firstAttribute="leading" secondItem="WA8-EB-ozZ" secondAttribute="leading" id="xRn-u5-zLS"/>
                     </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WA8-EB-ozZ">
-                    <rect key="frame" x="16" y="327" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="kGD-BU-Osk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Hsc-4o-xjM"/>
-                <constraint firstItem="WA8-EB-ozZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="cbN-2S-zGH"/>
-                <constraint firstItem="WA8-EB-ozZ" firstAttribute="top" secondItem="kGD-BU-Osk" secondAttribute="bottom" constant="32" id="hBT-Cx-fqp"/>
-                <constraint firstItem="kGD-BU-Osk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="iYh-he-LL3"/>
-                <constraint firstAttribute="trailing" secondItem="kGD-BU-Osk" secondAttribute="trailing" id="xPQ-av-bRH"/>
+                <constraint firstItem="Vvj-aj-ZDz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DLz-fy-lkp"/>
+                <constraint firstAttribute="trailing" secondItem="Vvj-aj-ZDz" secondAttribute="trailing" id="cdA-Me-clo"/>
+                <constraint firstAttribute="bottom" secondItem="Vvj-aj-ZDz" secondAttribute="bottom" id="ch4-BB-4JB"/>
+                <constraint firstItem="Vvj-aj-ZDz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tcB-Pk-5Je"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="mainImage" destination="kGD-BU-Osk" id="uGv-5y-ssI"/>
+                <outlet property="swipeView" destination="Vvj-aj-ZDz" id="SjO-CP-Rqg"/>
                 <outlet property="titleLabel" destination="WA8-EB-ozZ" id="gZb-qP-jUk"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="-56"/>

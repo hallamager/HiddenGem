@@ -11,6 +11,7 @@ import UIKit
 class SwipeView: UIView {
     
     
+    @IBOutlet weak var swipeView: UIView!
     @IBOutlet weak var mainImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -19,5 +20,16 @@ class SwipeView: UIView {
     //        mainImage.image = UIImage(named: job)
     //        titleLabel.text = job
     //    }
+    
+    override func awakeFromNib() {
+        
+        swipeView.layer.shadowOpacity = 0.5
+        swipeView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        swipeView.layer.shadowRadius = 4.0
+        swipeView.layer.shadowColor = UIColor.lightGray.cgColor
+        
+        
+        super.awakeFromNib()
+    }
     
 }

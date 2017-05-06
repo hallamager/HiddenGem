@@ -12,6 +12,7 @@ import Koloda
 class ViewController: UIViewController {
     
     @IBOutlet weak var kolodaView: KolodaView!
+
     
     var data = ["One", "Two", "Three"]
     
@@ -20,7 +21,6 @@ class ViewController: UIViewController {
         kolodaView.dataSource = self
         kolodaView.delegate = self
     }
-    
     
 }
 
