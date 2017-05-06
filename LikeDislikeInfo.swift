@@ -29,6 +29,8 @@ extension ViewController {
         kolodaView?.swipe(.right)
     }
     
-
+    @IBAction func undoButtonTapped() {
+        kolodaView?.revertAction()
+    }
     
 }

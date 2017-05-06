@@ -56,35 +56,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOp-MW-gIY" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="16" y="72" width="343" height="394"/>
-                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPc-hb-rSq" customClass="dropShadow" customModule="HiddenGem" customModuleProvider="target">
-                                <rect key="frame" x="53" y="505" width="268" height="71"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bPc-hb-rSq" userLabel="Like Dislike Panel" customClass="dropShadow" customModule="HiddenGem" customModuleProvider="target">
+                                <rect key="frame" x="79" y="534" width="218" height="62"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yr1-7X-pxP">
-                                        <rect key="frame" x="230" y="20" width="30" height="30"/>
-                                        <state key="normal" title="Like"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yr1-7X-pxP" userLabel="Like">
+                                        <rect key="frame" x="166" y="11" width="39" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
+                                        <state key="normal" image="Thumb Up"/>
                                         <connections>
                                             <action selector="rightButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="9gO-jE-pfB"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBb-WD-Bso">
-                                        <rect key="frame" x="8" y="20" width="45" height="30"/>
-                                        <state key="normal" title="Dislike"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBb-WD-Bso">
+                                        <rect key="frame" x="13" y="11" width="39" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                                        <state key="normal" title="Dislike" image="Thumb Down"/>
                                         <connections>
                                             <action selector="leftButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="5rJ-Y8-fnd"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ow3-an-ChG" userLabel="Info">
+                                        <rect key="frame" x="90" y="11" width="39" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                        <state key="normal" image="Info"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="UBb-WD-Bso" firstAttribute="leading" secondItem="bPc-hb-rSq" secondAttribute="leadingMargin" id="2LW-Io-2tv"/>
-                                    <constraint firstItem="Yr1-7X-pxP" firstAttribute="trailing" secondItem="bPc-hb-rSq" secondAttribute="trailingMargin" id="4mz-zA-QOl"/>
-                                    <constraint firstItem="UBb-WD-Bso" firstAttribute="baseline" secondItem="Yr1-7X-pxP" secondAttribute="baseline" id="Flj-qi-hgE"/>
-                                    <constraint firstItem="UBb-WD-Bso" firstAttribute="centerY" secondItem="bPc-hb-rSq" secondAttribute="centerY" id="dc6-QG-3CC"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="5"/>
@@ -101,21 +99,26 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOp-MW-gIY" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="8" y="76" width="357" height="419"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="EdM-l4-AKB" firstAttribute="top" secondItem="bPc-hb-rSq" secondAttribute="bottom" constant="42" id="Fv8-n3-9ZJ"/>
-                            <constraint firstItem="bPc-hb-rSq" firstAttribute="centerX" secondItem="jOp-MW-gIY" secondAttribute="centerX" id="H2Z-gi-SYv"/>
-                            <constraint firstItem="EdM-l4-AKB" firstAttribute="top" secondItem="jOp-MW-gIY" secondAttribute="bottom" constant="152" id="KVe-gd-TQe"/>
-                            <constraint firstItem="jOp-MW-gIY" firstAttribute="trailing" secondItem="uCo-tL-KTS" secondAttribute="trailingMargin" id="TzG-gB-UFo"/>
-                            <constraint firstItem="jOp-MW-gIY" firstAttribute="leading" secondItem="uCo-tL-KTS" secondAttribute="leadingMargin" id="XmD-sL-VFa"/>
-                            <constraint firstItem="bPc-hb-rSq" firstAttribute="top" secondItem="jOp-MW-gIY" secondAttribute="bottom" constant="39" id="aje-Zs-qrI"/>
-                            <constraint firstItem="bPc-hb-rSq" firstAttribute="leading" secondItem="uCo-tL-KTS" secondAttribute="leadingMargin" constant="37" id="lx7-5j-PwJ"/>
-                            <constraint firstItem="jOp-MW-gIY" firstAttribute="top" secondItem="xp2-wT-iWO" secondAttribute="bottom" constant="8" symbolic="YES" id="udy-vG-y0J"/>
+                            <constraint firstItem="jOp-MW-gIY" firstAttribute="trailing" secondItem="uCo-tL-KTS" secondAttribute="trailingMargin" constant="6.1682242990326586" id="8Nq-q9-Aro"/>
+                            <constraint firstItem="jOp-MW-gIY" firstAttribute="leading" secondItem="uCo-tL-KTS" secondAttribute="leadingMargin" constant="-7.8317757009672277" id="c5G-fQ-72G"/>
+                            <constraint firstItem="jOp-MW-gIY" firstAttribute="top" secondItem="xp2-wT-iWO" secondAttribute="bottom" constant="12" id="cvL-eR-nS0"/>
+                            <constraint firstAttribute="bottom" secondItem="jOp-MW-gIY" secondAttribute="bottom" constant="172" id="nFw-8q-USf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bKW-Nx-oWe">
                         <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="undo" id="zpd-bX-jiU">
+                            <connections>
+                                <action selector="undoButtonTapped" destination="BYZ-38-t0r" id="OE8-z3-BIg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="kolodaView" destination="jOp-MW-gIY" id="QBr-BS-MOT"/>
@@ -129,5 +132,8 @@
     <resources>
         <image name="Home" width="20" height="20"/>
         <image name="Home-Gradient" width="20" height="20"/>
+        <image name="Info" width="88" height="91"/>
+        <image name="Thumb Down" width="88" height="91"/>
+        <image name="Thumb Up" width="88" height="91"/>
     </resources>
 </document>

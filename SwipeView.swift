@@ -16,11 +16,6 @@ class SwipeView: UIView {
     @IBOutlet weak var titleLabel: UILabel!
     
     
-    //    func setupView(job: String) {
-    //        mainImage.image = UIImage(named: job)
-    //        titleLabel.text = job
-    //    }
-    
     override func awakeFromNib() {
         
         swipeView.layer.shadowOpacity = 0.5

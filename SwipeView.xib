@@ -6,40 +6,93 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="dincond-bold-58f64f9a6d5db.otf">
+            <string>DINCond-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SwipeView" customModule="HiddenGem" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SwipeView" customModule="HiddenGem" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="448"/>
+            <rect key="frame" x="0.0" y="0.0" width="343" height="419"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vvj-aj-ZDz">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="448"/>
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="419"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="companyImage" translatesAutoresizingMaskIntoConstraints="NO" id="kGD-BU-Osk" customClass="RoundedEnds" customModule="HiddenGem" customModuleProvider="target">
-                            <rect key="frame" x="8" y="8" width="359" height="277"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="277" id="Iee-8d-R3m"/>
-                            </constraints>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="companyImage" translatesAutoresizingMaskIntoConstraints="NO" id="kGD-BU-Osk" customClass="RoundedEnds" customModule="HiddenGem" customModuleProvider="target">
+                            <rect key="frame" x="8" y="8" width="327" height="277"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WA8-EB-ozZ" customClass="StyledLabel" customModule="HiddenGem" customModuleProvider="target">
-                            <rect key="frame" x="8" y="293" width="42" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GREENWOOD CAMPBELL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WA8-EB-ozZ" customClass="StyledLabel" customModule="HiddenGem" customModuleProvider="target">
+                            <rect key="frame" x="8" y="305" width="238" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="DINCond-Bold" family="DINCond-Bold" pointSize="27"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="tracking">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="stretching">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EA2-UU-KVE" customClass="GradientView" customModule="HiddenGem" customModuleProvider="target">
+                            <rect key="frame" x="8" y="283" width="327" height="5"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                    <color key="value" red="0.4549019608" green="0.7843137255" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                    <color key="value" red="0.24313725489999999" green="0.70588235290000001" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="briefcase-icon" translatesAutoresizingMaskIntoConstraints="NO" id="h8h-80-ZYK">
+                            <rect key="frame" x="8" y="352" width="20" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Marker-96" translatesAutoresizingMaskIntoConstraints="NO" id="fZK-BH-Hcr">
+                            <rect key="frame" x="8" y="384" width="20" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bournemouth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9UV-zV-C8o">
+                            <rect key="frame" x="36" y="384" width="74" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Marketing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agV-hq-ja5">
+                            <rect key="frame" x="123" y="352" width="55" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Creative Design" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lu2-pI-p11">
+                            <rect key="frame" x="186" y="352" width="85" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Digital Agency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTD-Px-Maz">
+                            <rect key="frame" x="36" y="352" width="79" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstItem="WA8-EB-ozZ" firstAttribute="top" secondItem="kGD-BU-Osk" secondAttribute="bottom" constant="8" symbolic="YES" id="6VX-mh-8oA"/>
-                        <constraint firstItem="kGD-BU-Osk" firstAttribute="top" secondItem="Vvj-aj-ZDz" secondAttribute="topMargin" id="OUi-ek-H03"/>
-                        <constraint firstItem="kGD-BU-Osk" firstAttribute="leading" secondItem="Vvj-aj-ZDz" secondAttribute="leadingMargin" id="P4y-ee-clK"/>
-                        <constraint firstItem="kGD-BU-Osk" firstAttribute="trailing" secondItem="Vvj-aj-ZDz" secondAttribute="trailingMargin" id="i2d-Pa-39Z"/>
-                        <constraint firstItem="kGD-BU-Osk" firstAttribute="leading" secondItem="WA8-EB-ozZ" secondAttribute="leading" id="xRn-u5-zLS"/>
-                    </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="6"/>
@@ -49,10 +102,10 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Vvj-aj-ZDz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DLz-fy-lkp"/>
-                <constraint firstAttribute="trailing" secondItem="Vvj-aj-ZDz" secondAttribute="trailing" id="cdA-Me-clo"/>
-                <constraint firstAttribute="bottom" secondItem="Vvj-aj-ZDz" secondAttribute="bottom" id="ch4-BB-4JB"/>
-                <constraint firstItem="Vvj-aj-ZDz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tcB-Pk-5Je"/>
+                <constraint firstAttribute="bottom" secondItem="Vvj-aj-ZDz" secondAttribute="bottom" id="0JI-aT-yQh"/>
+                <constraint firstItem="Vvj-aj-ZDz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8CY-Da-W98"/>
+                <constraint firstAttribute="trailing" secondItem="Vvj-aj-ZDz" secondAttribute="trailing" id="Duk-fd-nT6"/>
+                <constraint firstItem="Vvj-aj-ZDz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fv4-kY-Dkt"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
@@ -60,10 +113,12 @@
                 <outlet property="swipeView" destination="Vvj-aj-ZDz" id="SjO-CP-Rqg"/>
                 <outlet property="titleLabel" destination="WA8-EB-ozZ" id="gZb-qP-jUk"/>
             </connections>
-            <point key="canvasLocation" x="33.5" y="-56"/>
+            <point key="canvasLocation" x="33.5" y="-56.5"/>
         </view>
     </objects>
     <resources>
+        <image name="Marker-96" width="88" height="91"/>
+        <image name="briefcase-icon" width="88" height="91"/>
         <image name="companyImage" width="545" height="363"/>
     </resources>
 </document>
