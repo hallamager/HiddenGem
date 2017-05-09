@@ -9,12 +9,6 @@
 import UIKit
 import Koloda
 
-class likeDislikePanel: KolodaView {
-    
-
-    
-}
-
 
 extension ViewController {
 
@@ -32,5 +26,7 @@ extension ViewController {
     @IBAction func undoButtonTapped() {
         kolodaView?.revertAction()
     }
+    
+    
     
 }
