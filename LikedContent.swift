@@ -32,14 +32,14 @@ func buildContent() -> [LikedContent] {
     var likes = [LikedContent]()
     
     likes.append(LikedContent(
-                        name: "Heathland Path",
-                        foldingName: "Heathland Path"
+                        name: "GREENWOOD CAMPBELL",
+                        foldingName: "GREENWOOD CAMPBELL"
         )
     )
     
     likes.append(LikedContent(
-                        name: "Sensory Path",
-                        foldingName: "Sensory Path"
+                        name: "REDWEB",
+                        foldingName: "REDWEB"
         )
     )
     

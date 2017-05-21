@@ -19,8 +19,8 @@ class LikedViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let kCloseCellHeight: CGFloat = 160
-    let kOpenCellHeight: CGFloat = 470
+    let kCloseCellHeight: CGFloat = 180
+    let kOpenCellHeight: CGFloat = 490
     
     var likes = buildContent()
     var routesName: String!
@@ -34,6 +34,7 @@ class LikedViewController: UIViewController {
         for _ in 0...likes.count {
             cellHeights.append(kCloseCellHeight)
         }
+        
         
         tableView.backgroundView = UIImageView(image: UIImage(named: "bg"))
         
@@ -59,7 +60,6 @@ extension LikedViewController: UITableViewDataSource {
         
         cell.likedContent = likes[indexPath.row]
         cell.setUpCell()
-//        cell.delegate = self
         
         return cell
     }
