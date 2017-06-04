@@ -10,30 +10,41 @@ import Foundation
 import XLPagerTabStrip
 
 class RegisterViewController: UIViewController, IndicatorInfoProvider {
-    
-    var itemInfo: IndicatorInfo = "View"
-    
-    init(itemInfo: IndicatorInfo) {
-        self.itemInfo = itemInfo
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
+    @IBOutlet weak var studentButton: UIButton!
+    @IBOutlet weak var businessButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view = Bundle.main.loadNibNamed("Register", owner: self, options: nil)![0] as! Register
+        studentButton.layer.shadowOpacity = 0.5
+        studentButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        studentButton.layer.shadowRadius = 4.0
+        studentButton.layer.shadowColor = UIColor.lightGray.cgColor
+        studentButton.layer.cornerRadius = 18
+        studentButton.layer.masksToBounds = true
         
-        view.backgroundColor = .white
+        businessButton.layer.cornerRadius = studentButton.layer.cornerRadius
+        businessButton.layer.shadowOpacity = studentButton.layer.shadowOpacity
+        businessButton.layer.shadowOffset = studentButton.layer.shadowOffset
+        businessButton.layer.shadowRadius = studentButton.layer.shadowRadius
+        businessButton.layer.shadowColor = studentButton.layer.shadowColor
+        businessButton.layer.masksToBounds = true
+        
+        
+        self.studentButton.titleLabel?.textColor = UIColor.white
+        
+        self.studentButton.applyGradient(colours: [UIColor(red: 119/255.0, green: 201/255.0, blue: 212/255.0, alpha: 1.0), UIColor(red: 62/255.0, green: 180/255.0, blue: 123/255.0, alpha: 1.0)])
+        
+        self.businessButton.titleLabel?.textColor = UIColor.white
+        
+        self.businessButton.applyGradient(colours: [UIColor(red: 119/255.0, green: 201/255.0, blue: 212/255.0, alpha: 1.0), UIColor(red: 62/255.0, green: 180/255.0, blue: 123/255.0, alpha: 1.0)])
         
     }
     
     // MARK: - IndicatorInfoProvider
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return itemInfo
+        return IndicatorInfo(title: "REGISTER")
     }
 }

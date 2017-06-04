@@ -51,8 +51,8 @@ class TabsViewController: ButtonBarPagerTabStripViewController {
     // MARK: - PagerTabStripDataSource
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        let child_1 = LogInViewController(itemInfo: "SIGN IN")
-        let child_2 = RegisterViewController(itemInfo: "SIGN UP")
+        let child_1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "logIn")
+        let child_2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "register")
         return [child_1, child_2]
     }
     
