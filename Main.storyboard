@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hTM-qZ-LWD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8Bt-Cr-C0p">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -80,11 +80,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bPc-hb-rSq" userLabel="Like Dislike Panel" customClass="dropShadow" customModule="HiddenGem" customModuleProvider="target">
-                                <rect key="frame" x="79" y="534" width="218" height="62"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="79" y="527" width="218" height="61.5"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yr1-7X-pxP" userLabel="Like">
-                                        <rect key="frame" x="166" y="11" width="39" height="41"/>
+                                        <rect key="frame" x="166" y="11" width="39" height="40.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
                                         <state key="normal" image="Thumb Up"/>
                                         <connections>
@@ -92,7 +92,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBb-WD-Bso">
-                                        <rect key="frame" x="13" y="11" width="39" height="41"/>
+                                        <rect key="frame" x="13" y="11" width="39" height="40.5"/>
                                         <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                         <state key="normal" title="Dislike" image="Thumb Down"/>
                                         <connections>
@@ -100,7 +100,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ow3-an-ChG" userLabel="Info">
-                                        <rect key="frame" x="90" y="11" width="39" height="41"/>
+                                        <rect key="frame" x="90" y="11" width="39" height="40.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                         <state key="normal" image="Info"/>
                                         <connections>
@@ -214,22 +214,22 @@
                         <viewControllerLayoutGuide type="bottom" id="eqB-Hr-EVd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zEH-jT-1Hl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="695"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="400" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ERo-qg-O3r">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="695"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoldingCell" rowHeight="667" id="9bM-HK-3JK" customClass="LikedCell" customModule="HiddenGem" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="667"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="667"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9bM-HK-3JK" id="Ne2-nl-4HI">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="667"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kj1-DA-hXn" userLabel="Foreground" customClass="RotatedView" customModule="FoldingCell">
-                                                    <rect key="frame" x="13" y="7" width="574" height="160"/>
+                                                    <rect key="frame" x="13" y="7" width="349" height="160"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="companyImage" translatesAutoresizingMaskIntoConstraints="NO" id="H4q-bk-DKh">
                                                             <rect key="frame" x="0.0" y="0.0" width="144" height="160"/>
@@ -252,7 +252,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zX9-KX-gvr" customClass="GradientView" customModule="HiddenGem">
-                                                            <rect key="frame" x="0.0" y="155" width="574" height="5"/>
+                                                            <rect key="frame" x="0.0" y="155" width="349" height="5"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
@@ -339,13 +339,13 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zv9-VG-M6d" userLabel="Container" customClass="dropShadow" customModule="HiddenGem" customModuleProvider="target">
-                                                    <rect key="frame" x="13" y="180" width="574" height="450"/>
+                                                    <rect key="frame" x="13" y="180" width="349" height="450"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uV0-5f-0iO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="574" height="160"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="349" height="161"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAA-xv-SD1" customClass="StyledLabel" customModule="HiddenGem" customModuleProvider="target">
-                                                                    <rect key="frame" x="268.5" y="12" width="37" height="23.5"/>
+                                                                    <rect key="frame" x="153" y="12" width="43.5" height="24"/>
                                                                     <fontDescription key="fontDescription" name="DINCond-Bold" family="DINCond-Bold" pointSize="20"/>
                                                                     <color key="textColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -364,14 +364,14 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ac-9t-aSC">
-                                                            <rect key="frame" x="0.0" y="159" width="574" height="70"/>
+                                                            <rect key="frame" x="0.0" y="159" width="349" height="70"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="70" id="XQq-3W-EiM"/>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XZX-yP-yTb">
-                                                            <rect key="frame" x="0.0" y="227" width="574" height="82"/>
+                                                            <rect key="frame" x="0.0" y="227" width="349" height="82"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="weA-RU-Cj0">
                                                                     <rect key="frame" x="0.0" y="79" width="574" height="1"/>
@@ -385,7 +385,7 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6w-zg-EP5">
-                                                            <rect key="frame" x="0.0" y="309" width="574" height="133"/>
+                                                            <rect key="frame" x="0.0" y="309" width="349" height="133"/>
                                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="133" id="Lbi-Gc-W4q"/>
@@ -455,8 +455,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="U1u-I8-SRH"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="695"/>
                     <connections>
                         <outlet property="tableView" destination="ERo-qg-O3r" id="3nx-XO-yOR"/>
                     </connections>
@@ -464,6 +462,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GeK-wO-auu" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1345.5999999999999" y="542.87856071964018"/>
+        </scene>
+        <!--ACTIVITY-->
+        <scene sceneID="3ww-4X-KQU">
+            <objects>
+                <viewController id="8Bt-Cr-C0p" customClass="TabsViewController" customModule="HiddenGem" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nip-O9-Hu2"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tpd-8z-hyd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rvg-zA-a8v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="emz-qj-fV1">
+                                <rect key="frame" x="0.0" y="212" width="375" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sms-x1-3MO" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="154" width="375" height="58"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SYz-63-p68">
+                                    <size key="itemSize" width="40" height="40"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logInImage" translatesAutoresizingMaskIntoConstraints="NO" id="f1B-7i-427">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yEG-al-r2y" customClass="GradientView" customModule="HiddenGem" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="148" width="375" height="6"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                        <color key="value" red="0.46666666670000001" green="0.78823529410000004" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                        <color key="value" red="0.24313725489999999" green="0.70588235290000001" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="ACTIVITY" id="8OK-0Y-rb8"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonBarView" destination="Sms-x1-3MO" id="zC7-o6-l3b"/>
+                        <outlet property="containerView" destination="emz-qj-fV1" id="CRe-AR-3xP"/>
+                        <outlet property="tabsView" destination="Sms-x1-3MO" id="qPl-LM-XfK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jGw-oI-0sU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71.200000000000003" y="-1190.5547226386807"/>
         </scene>
     </scenes>
     <resources>
@@ -476,5 +534,6 @@
         <image name="Thumb Up" width="88" height="91"/>
         <image name="briefcase-icon" width="88" height="91"/>
         <image name="companyImage" width="545" height="363"/>
+        <image name="logInImage" width="375" height="135"/>
     </resources>
 </document>
