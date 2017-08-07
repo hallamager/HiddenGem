@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8Bt-Cr-C0p">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8Bt-Cr-C0p">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,9 +36,10 @@
         <!--Home-->
         <scene sceneID="wXh-YW-IFU">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3xv-Br-k3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="ln7-lp-lGt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="Home-Gradient" id="5zp-6f-IEq"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UWQ-Ob-9ft">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="UWQ-Ob-9ft">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -46,7 +47,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4j0-8Q-23Y"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3xv-Br-k3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="74" y="-180"/>
         </scene>
@@ -55,7 +55,7 @@
             <objects>
                 <navigationController id="qk0-IV-hKC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Liked" image="Heart" id="Gsx-nD-te5"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YG4-N4-cgh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="YG4-N4-cgh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -80,11 +80,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bPc-hb-rSq" userLabel="Like Dislike Panel" customClass="dropShadow" customModule="HiddenGem" customModuleProvider="target">
-                                <rect key="frame" x="79" y="589" width="257" height="68.5"/>
+                                <rect key="frame" x="79" y="589" width="257" height="69"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yr1-7X-pxP" userLabel="Like">
-                                        <rect key="frame" x="205" y="11" width="39" height="47.5"/>
+                                        <rect key="frame" x="204" y="10" width="39" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
                                         <state key="normal" image="Thumb Up"/>
                                         <connections>
@@ -92,7 +92,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBb-WD-Bso">
-                                        <rect key="frame" x="13" y="11" width="39" height="47.5"/>
+                                        <rect key="frame" x="13" y="10" width="39" height="48"/>
                                         <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                         <state key="normal" title="Dislike" image="Thumb Down"/>
                                         <connections>
@@ -100,7 +100,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ow3-an-ChG" userLabel="Info">
-                                        <rect key="frame" x="109.5" y="11" width="39" height="47.5"/>
+                                        <rect key="frame" x="109" y="10" width="39" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                         <state key="normal" image="Info"/>
                                         <connections>
@@ -140,7 +140,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="bKW-Nx-oWe">
                         <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="undo" id="zpd-bX-jiU">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="add" id="vfE-eL-3VO"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="zpd-bX-jiU">
                             <connections>
                                 <action selector="undoButtonTapped" destination="BYZ-38-t0r" id="OE8-z3-BIg"/>
                             </connections>
@@ -152,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1348" y="-181.25937031484258"/>
+            <point key="canvasLocation" x="1347.8260869565217" y="-181.79347826086959"/>
         </scene>
         <!--More Info View Controller-->
         <scene sceneID="qKm-ms-7Vf">
@@ -238,7 +239,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wh-1q-cnH" customClass="StyledLabel" customModule="HiddenGem" customModuleProvider="target">
-                                                            <rect key="frame" x="152" y="1" width="48.666666666666657" height="31"/>
+                                                            <rect key="frame" x="152" y="1" width="48.333333333333343" height="31"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="31" id="K7N-JW-DlA"/>
                                                             </constraints>
@@ -345,7 +346,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="388" height="161"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAA-xv-SD1" customClass="StyledLabel" customModule="HiddenGem" customModuleProvider="target">
-                                                                    <rect key="frame" x="172.66666666666666" y="12" width="43" height="24"/>
+                                                                    <rect key="frame" x="172.66666666666663" y="12" width="43.333333333333343" height="24"/>
                                                                     <fontDescription key="fontDescription" name="DINCond-Bold" family="DINCond-Bold" pointSize="20"/>
                                                                     <color key="textColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>

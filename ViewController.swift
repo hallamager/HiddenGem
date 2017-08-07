@@ -12,8 +12,6 @@ import Koloda
 class ViewController: UIViewController {
     
     @IBOutlet weak var kolodaView: KolodaView!
-
-    
     
     var data = ["One", "Two", "Three"]
     
@@ -34,7 +32,7 @@ extension ViewController: KolodaViewDelegate {
     
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-        performSegue(withIdentifier: "MoreInfo", sender: nil)
+//        performSegue(withIdentifier: "MoreInfo", sender: nil)
 
     }
     

@@ -10,7 +10,6 @@ import UIKit
 
 class SwipeView: UIView {
     
-    
     @IBOutlet weak var swipeView: UIView!
     @IBOutlet weak var mainImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -23,8 +22,14 @@ class SwipeView: UIView {
         swipeView.layer.shadowRadius = 4.0
         swipeView.layer.shadowColor = UIColor.lightGray.cgColor
         
-        
         super.awakeFromNib()
+    }
+    @IBAction func swipeView(_ sender: UIButton) {
+        
+        let moreInfo = Bundle.main.loadNibNamed("MoreInfo", owner: self, options: nil)![0] as! MoreInfo
+
+        UIView.transition(from: swipeView, to: moreInfo, duration: 0.5, options: .transitionFlipFromRight)
+
     }
     
 }
