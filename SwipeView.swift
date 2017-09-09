@@ -27,7 +27,9 @@ class SwipeView: UIView {
     @IBAction func swipeView(_ sender: UIButton) {
         
         let moreInfo = Bundle.main.loadNibNamed("MoreInfo", owner: self, options: nil)![0] as! MoreInfo
-
+        
+        moreInfo.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        
         UIView.transition(from: swipeView, to: moreInfo, duration: 0.5, options: .transitionFlipFromRight)
 
     }

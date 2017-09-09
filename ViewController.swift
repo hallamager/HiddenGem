@@ -12,6 +12,7 @@ import Koloda
 class ViewController: UIViewController {
     
     @IBOutlet weak var kolodaView: KolodaView!
+    @IBOutlet var OpenMenu: UIBarButtonItem!
     
     var data = ["One", "Two", "Three"]
     
@@ -19,6 +20,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         kolodaView.dataSource = self
         kolodaView.delegate = self
+        
+        //open menu with tab bar button
+        OpenMenu.target = self.revealViewController()
+        OpenMenu.action = #selector(SWRevealViewController.revealToggle(_:))
+        
+        //open menu with swipe gesture
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
     }
     

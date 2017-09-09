@@ -18,6 +18,8 @@ class LikedViewController: UIViewController {
     var selectedRow = 0
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var OpenMenu: UIBarButtonItem!
+    
     
     let kCloseCellHeight: CGFloat = 180
     let kOpenCellHeight: CGFloat = 490
@@ -38,6 +40,12 @@ class LikedViewController: UIViewController {
         
         tableView.backgroundView = UIImageView(image: UIImage(named: "bg"))
         
+        //open menu with tab bar button
+        OpenMenu.target = self.revealViewController()
+        OpenMenu.action = #selector(SWRevealViewController.revealToggle(_:))
+        
+        //open menu with swipe gesture
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
     }
     

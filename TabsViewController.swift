@@ -15,13 +15,13 @@ class TabsViewController: ButtonBarPagerTabStripViewController {
     
     let gradient = CAGradientLayer()
     
-    let blueInstagramColor = UIColor(red: 37/255.0, green: 111/255.0, blue: 206/255.0, alpha: 1.0)
+    let blueInstagramColor = UIColor(red: 8/255.0, green: 80/255.0, blue: 120/255.0, alpha: 1.0)
     
     override func viewDidLoad() {
         // change selected bar color
         settings.style.buttonBarBackgroundColor = .white
         settings.style.buttonBarItemBackgroundColor = .white
-        settings.style.buttonBarItemFont = UIFont(name: "DINCond-Bold", size:20) ?? UIFont.systemFont(ofSize: 14)
+        settings.style.buttonBarItemFont = UIFont(name: "Gotham Rounded", size:20) ?? UIFont.systemFont(ofSize: 14)
         settings.style.selectedBarBackgroundColor = blueInstagramColor
         settings.style.selectedBarHeight = 2.0
         settings.style.buttonBarMinimumLineSpacing = 0
@@ -55,6 +55,6 @@ class TabsViewController: ButtonBarPagerTabStripViewController {
         let child_2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "register")
         return [child_1, child_2]
     }
-    
+
 }
 

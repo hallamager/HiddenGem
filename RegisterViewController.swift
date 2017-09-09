@@ -32,19 +32,19 @@ class RegisterViewController: UIViewController, IndicatorInfoProvider {
         businessButton.layer.masksToBounds = true
         
         
-        self.studentButton.titleLabel?.textColor = UIColor.white
-        
-        self.studentButton.applyGradient(colours: [UIColor(red: 119/255.0, green: 201/255.0, blue: 212/255.0, alpha: 1.0), UIColor(red: 62/255.0, green: 180/255.0, blue: 123/255.0, alpha: 1.0)])
-        
-        self.businessButton.titleLabel?.textColor = UIColor.white
-        
-        self.businessButton.applyGradient(colours: [UIColor(red: 119/255.0, green: 201/255.0, blue: 212/255.0, alpha: 1.0), UIColor(red: 62/255.0, green: 180/255.0, blue: 123/255.0, alpha: 1.0)])
+//        self.studentButton.titleLabel?.textColor = UIColor.white
+//        
+//        self.studentButton.applyGradient(colours: [UIColor(red: 119/255.0, green: 201/255.0, blue: 212/255.0, alpha: 1.0), UIColor(red: 62/255.0, green: 180/255.0, blue: 123/255.0, alpha: 1.0)])
+//        
+//        self.businessButton.titleLabel?.textColor = UIColor.white
+//        
+//        self.businessButton.applyGradient(colours: [UIColor(red: 119/255.0, green: 201/255.0, blue: 212/255.0, alpha: 1.0), UIColor(red: 62/255.0, green: 180/255.0, blue: 123/255.0, alpha: 1.0)])
         
     }
     
     // MARK: - IndicatorInfoProvider
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "REGISTER")
+        return IndicatorInfo(title: "Register")
     }
 }

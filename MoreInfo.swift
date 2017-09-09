@@ -12,13 +12,13 @@ class MoreInfo: UIView {
     
     @IBOutlet weak var moreInfo: UIView!
     
+        
     override func awakeFromNib() {
         
         moreInfo.layer.shadowOpacity = 0.5
         moreInfo.layer.shadowOffset = CGSize(width: 0, height: 0)
         moreInfo.layer.shadowRadius = 4.0
         moreInfo.layer.shadowColor = UIColor.lightGray.cgColor
-        
         
         super.awakeFromNib()
     }
