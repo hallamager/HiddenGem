@@ -25,11 +25,12 @@ class ViewController: UIViewController {
         OpenMenu.target = self.revealViewController()
         OpenMenu.action = #selector(SWRevealViewController.revealToggle(_:))
         
+        
         //open menu with swipe gesture
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
     }
-    
+
 }
 
 extension ViewController: KolodaViewDelegate {
@@ -40,14 +41,29 @@ extension ViewController: KolodaViewDelegate {
     
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-//        performSegue(withIdentifier: "MoreInfo", sender: nil)
-
+        //what happens when card is pressed
+        print("card tapped")
     }
+    
+//    func koloda(_ koloda: KolodaView, shouldDragCardAt index: Int) -> Bool {
+//        // If you return false the card will not move.
+//        return false
+//    }
+
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         
         let x = data[index]
-        print("did swipe \(x) in diredtion: \(direction)")
+        print("did swipe \(x) in direction: \(direction)")
+        
+//        if direction == SwipeResultDirection.right {
+//            // implement your functions or whatever here
+//            print("user swiped right")
+//        } else if direction == .left {
+//            // implement your functions or whatever here
+//            print("user swiped left")
+//        }
+        
     }
     
 }
@@ -62,9 +78,9 @@ extension ViewController: KolodaViewDataSource {
         
         let swipeView = Bundle.main.loadNibNamed("SwipeView", owner: self, options: nil)![0] as! SwipeView
 
-        let x = data[index]
+//        let x = data[index]
         
-        //        swipeView.setupView(job: x)
+//        swipeView.setupView(job: x)
     
         return swipeView
 

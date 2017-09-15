@@ -12,9 +12,15 @@ import Foundation
 class BackTableViewController: UITableViewController {
     
     var TableArray = [String]()
+    var coverView: UIView?
     
     override func viewDidLoad() {
         TableArray = ["Home","Liked"]
+        
+        // sets color overlay on front view controller
+        coverView = UIView(frame: UIScreen.main.bounds)
+        coverView?.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 0.5)
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,4 +36,28 @@ class BackTableViewController: UITableViewController {
         return cell
         
     }
+    
+    // disables interactions on front view controller
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.revealViewController().view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        self.revealViewController().frontViewController.revealViewController().tapGestureRecognizer()
+        self.revealViewController().frontViewController.view.isUserInteractionEnabled = false
+        
+        // displays color overlay view on front view controller
+        self.revealViewController().frontViewController.view.addSubview(coverView!)
+
+    }
+    
+    // re-nables interactions on front view controller once menu is closed
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.revealViewController().frontViewController.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        self.revealViewController().frontViewController.view.isUserInteractionEnabled = true
+        
+        // removes color overlay view on front view controller
+        coverView!.removeFromSuperview()
+        
+    }
+
 }
