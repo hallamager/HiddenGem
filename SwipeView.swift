@@ -14,14 +14,16 @@ class SwipeView: UIView {
     @IBOutlet weak var swipeView: UIView!
     @IBOutlet weak var mainImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var bottomView: UIView!
     
     override func awakeFromNib() {
         
-        swipeView.layer.shadowOpacity = 0.5
-        swipeView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        swipeView.layer.shadowRadius = 4.0
-        swipeView.layer.shadowColor = UIColor.lightGray.cgColor
-                
+        swipeView.layer.shadowOpacity = 0.3
+        swipeView.layer.shadowOffset = CGSize(width: 0, height: 9)
+        swipeView.layer.shadowRadius = 6
+        swipeView.layer.shadowColor = UIColor.black.cgColor
+        
         super.awakeFromNib()
     }
     @IBAction func swipeView(_ sender: UIButton) {

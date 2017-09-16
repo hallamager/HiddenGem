@@ -44,6 +44,12 @@ class BackTableViewController: UITableViewController {
         self.revealViewController().frontViewController.revealViewController().tapGestureRecognizer()
         self.revealViewController().frontViewController.view.isUserInteractionEnabled = false
         
+        // remove shadow on front view controller
+        self.revealViewController().frontViewShadowOffset = CGSize(width: 0, height: 0);
+        self.revealViewController().frontViewShadowOpacity = 0.0;
+        self.revealViewController().frontViewShadowRadius = 0.0;
+
+        
         // displays color overlay view on front view controller
         self.revealViewController().frontViewController.view.addSubview(coverView!)
 

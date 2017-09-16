@@ -45,6 +45,11 @@ extension ViewController: KolodaViewDelegate {
         print("card tapped")
     }
     
+    func kolodaSwipeThresholdRatioMargin(_ koloda: KolodaView) -> CGFloat? {
+        return 0.1
+    }
+
+    
 //    func koloda(_ koloda: KolodaView, shouldDragCardAt index: Int) -> Bool {
 //        // If you return false the card will not move.
 //        return false
