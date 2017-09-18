@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Koloda
 
 class MoreInfo: UIView {
     
@@ -22,5 +23,16 @@ class MoreInfo: UIView {
         
         super.awakeFromNib()
     }
+
+    @IBAction func moreInfo(_ sender: Any) {
+        
+        let swipeView = Bundle.main.loadNibNamed("SwipeView", owner: self, options: nil)![0] as! SwipeView
+        
+        swipeView.frame = self.bounds
+        
+        UIView.transition(from: moreInfo, to: swipeView, duration: 0.5, options: .transitionFlipFromLeft)
+        
+    }
+    
     
 }

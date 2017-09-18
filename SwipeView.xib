@@ -20,12 +20,6 @@
             <rect key="frame" x="0.0" y="0.0" width="343" height="419"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-Io-EE7">
-                    <rect key="frame" x="0.0" y="0.0" width="343" height="419"/>
-                    <connections>
-                        <action selector="swipeView:" destination="iN0-l3-epB" eventType="touchUpInside" id="x61-xC-fmB"/>
-                    </connections>
-                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vvj-aj-ZDz">
                     <rect key="frame" x="0.0" y="0.0" width="343" height="419"/>
                     <subviews>
@@ -137,6 +131,12 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-Io-EE7">
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="419"/>
+                    <connections>
+                        <action selector="swipeView:" destination="iN0-l3-epB" eventType="touchUpInside" id="x61-xC-fmB"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Vvj-aj-ZDz" secondAttribute="bottom" id="0JI-aT-yQh"/>

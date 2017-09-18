@@ -61,16 +61,23 @@ extension ViewController: KolodaViewDelegate {
         let x = data[index]
         print("did swipe \(x) in direction: \(direction)")
         
-//        if direction == SwipeResultDirection.right {
-//            // implement your functions or whatever here
-//            print("user swiped right")
-//        } else if direction == .left {
-//            // implement your functions or whatever here
-//            print("user swiped left")
-//        }
-        
     }
     
+    func koloda(_ koloda: KolodaView, draggedCardWithPercentage finishPercentage: CGFloat, in direction: SwipeResultDirection) {
+//        print("being swiped \(direction)")
+        
+        if direction == SwipeResultDirection.right {
+            // implement your functions or whatever here
+            print("user swiping right")
+            
+            
+        } else if direction == .left {
+            // implement your functions or whatever here
+            print("user swiping left")
+        }
+        
+    }
+
 }
 
 extension ViewController: KolodaViewDataSource {
@@ -86,7 +93,7 @@ extension ViewController: KolodaViewDataSource {
 //        let x = data[index]
         
 //        swipeView.setupView(job: x)
-    
+        
         return swipeView
 
     }
