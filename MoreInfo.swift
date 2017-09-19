@@ -32,6 +32,11 @@ class MoreInfo: UIView {
         
         UIView.transition(from: moreInfo, to: swipeView, duration: 0.5, options: .transitionFlipFromLeft)
         
+        func koloda(koloda: KolodaView, shouldDragCardAt: Int) -> Bool {
+            print("swiping disabled")
+            return false
+        }
+        
     }
     
     

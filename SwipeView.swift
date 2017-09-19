@@ -19,10 +19,11 @@ class SwipeView: UIView {
     
     override func awakeFromNib() {
         
-        swipeView.layer.shadowOpacity = 0.3
+        swipeView.layer.shadowOpacity = 0.2
         swipeView.layer.shadowOffset = CGSize(width: 0, height: 9)
         swipeView.layer.shadowRadius = 6
         swipeView.layer.shadowColor = UIColor.black.cgColor
+
         
         super.awakeFromNib()
     }

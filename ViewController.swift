@@ -35,16 +35,18 @@ class ViewController: UIViewController {
 
 extension ViewController: KolodaViewDelegate {
     
+    //what happens when user runs out of cards
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
         print("Out of cards")
     }
     
-    
+    //what happens when card is pressed
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-        //what happens when card is pressed
         print("card tapped")
+        
     }
     
+    // point at wich card disappears
     func kolodaSwipeThresholdRatioMargin(_ koloda: KolodaView) -> CGFloat? {
         return 0.1
     }

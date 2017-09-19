@@ -11,29 +11,64 @@ import Foundation
 
 class BackTableViewController: UITableViewController {
     
-    var TableArray = [String]()
+    var menuNameArray:Array = [String]()
+    var iconImage:Array = [UIImage]()
     var coverView: UIView?
     
     override func viewDidLoad() {
-        TableArray = ["Home","Liked"]
         
         // sets color overlay on front view controller
         coverView = UIView(frame: UIScreen.main.bounds)
         coverView?.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 0.5)
         
+        // sets menu title and image icon
+        menuNameArray = ["Home", "Liked", "Chats", "News Feed", "Profile"]
+        iconImage = [UIImage(named: "Home-icon")!, UIImage(named: "Liked-icon")!, UIImage(named: "Chats-icon")!, UIImage(named: "News-Feed-icon")!, UIImage(named: "Profile-icon")! ]
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return TableArray.count
+        
+        return menuNameArray.count
+        
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt IndexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableArray[IndexPath.row], for: IndexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell") as! MenuTableViewCell
         
-        cell.textLabel?.text = TableArray[IndexPath.row]
-        
+        cell.imgIcon.image = iconImage[indexPath.row]
+        cell.lblMenuName.text! = menuNameArray[indexPath.row]
         return cell
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let revealViewController:SWRevealViewController = self.revealViewController()
+        
+        let cell:MenuTableViewCell = tableView.cellForRow(at: indexPath) as! MenuTableViewCell
+        
+        if cell.lblMenuName.text! == "Home"
+        {
+            
+            let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let desController = mainStoryboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            let newFrontViewController = UINavigationController.init(rootViewController:desController)
+            
+            revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+            
+        }
+        if cell.lblMenuName.text! == "Liked"
+        {
+        
+            let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let desController = mainStoryboard.instantiateViewController(withIdentifier: "LikedViewController") as! LikedViewController
+            let newFrontViewController = UINavigationController.init(rootViewController:desController)
+            
+            revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+            
+        }
         
     }
     
